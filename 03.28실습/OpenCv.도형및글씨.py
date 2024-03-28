@@ -14,6 +14,7 @@ def draw(event, x, y, flags, param): #콜백 함수
 
     cv.imshow('Drawing', img)
 
+cv.rectangle(img, (230,480), (620,950), (0,0,255), 2) # 직사각형 그리기
 cv.putText(img, 'apple', (330,680), cv.FONT_HERSHEY_SIMPLEX, 1, (255,0,0),2) # 글씨 쓰기
 cv.namedWindow('Drawing')
 cv.imshow('Drawing', img)
