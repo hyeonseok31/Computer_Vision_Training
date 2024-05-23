@@ -20,7 +20,7 @@ cnn.add(Dropout(0.75))
 cnn.add(Dense(units=120, activation='softmax'))  # 결과 출력을 위한 완전연결층, 120개의 클래스
 
 cnn.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(learning_rate=0.000001), metrics=['accuracy'])
-hist = cnn.fit(train_ds, epochs=200, validation_data=test_ds, verbose=2)
+hist = cnn.fit(train_ds, epochs=3, validation_data=test_ds, verbose=2)
 
 print('정확률=', cnn.evaluate(test_ds, verbose=0)[1] * 100)
 
